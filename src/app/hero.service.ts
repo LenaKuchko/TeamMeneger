@@ -33,4 +33,8 @@ updateHero(heroToUpdate){
                   worldSaveTimes: heroToUpdate.worldSaveTimes
                 });
               }
+deleteHeroFromDB(heroToDelete){
+  var hero = this.findHero(heroToDelete.$key);
+     hero.remove();
+}
 }
