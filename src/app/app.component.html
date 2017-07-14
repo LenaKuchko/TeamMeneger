@@ -5,8 +5,8 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a routerLink="">Home</a></li>
-      <li><a routerLink="new-hero">New Hero</a></li>
-      <li><a hrouterLink="filter-hero">Search</a></li>
+
+      <li><a routerLink="filter-hero">Filter</a></li>
 
     </ul>
     <ul class="nav navbar-nav navbar-right">
@@ -19,3 +19,16 @@
 <div class="container">
   <router-outlet></router-outlet>
 </div>
+
+<nav class="navbar navbar-inverse footer">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">Admin</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a routerLink="admin">New Hero</a></li>
+      <!-- <li><a routerLink="admin/edit/:key">Edit/Delete Hero</a></li> -->
+
+    </ul>
+  </div>
+</nav>

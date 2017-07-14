@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class EditHeroComponent implements OnInit {
   @Input() selectedHero;
+  currentRoute: string = this.router.url;
 
   constructor(private heroService: HeroService, private router: Router) { }
 

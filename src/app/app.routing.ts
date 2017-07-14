@@ -14,8 +14,16 @@ const appRoutes: Routes = [
     component: HeroDetailsComponent
   },
   {
-    path: 'new-hero',
+    path: 'admin',
     component: NewHeroComponent
+  },
+  {
+    path: 'filter-hero',
+    component: HomePageComponent
+  },
+  {
+    path: 'admin/heroes/:$key',
+    component: HomePageComponent
   }
 ];
 
