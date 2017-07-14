@@ -9,6 +9,7 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { masterFirebaseConfig } from './api-keys';
+import { HeroDetailsComponent } from './hero-details/hero-details.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -20,7 +21,8 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent
+    HomePageComponent,
+    HeroDetailsComponent
   ],
   imports: [
     BrowserModule,

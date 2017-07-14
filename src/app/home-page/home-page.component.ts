@@ -24,4 +24,8 @@ export class HomePageComponent implements OnInit {
     })
   }
 
+  goToHeroDetailPage(clickedHero){
+    this.router.navigate(['heroes', clickedHero.$key]);
+  }
+
 }

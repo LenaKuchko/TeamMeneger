@@ -1,0 +1,25 @@
+<!-- <div *ngIf="showProperties">-->
+  <div class="imageWrapper">
+    <img src="{{heroToDisplay.urlImage}}" alt="">
+  </div>
+  <h2>{{(heroToDisplay).name}}</h2>
+  <h4>{{(heroToDisplay).category}}</h4>
+  <h5>{{(heroToDisplay).description}}</h5>
+  <h5>{{(heroToDisplay).health}}</h5>
+  <h5>{{(heroToDisplay).attack}}</h5>
+  <h5>{{(heroToDisplay).stars}}</h5>
+  <h5>{{(heroToDisplay).worldSaveTimes}}</h5>
+
+  <div *ngFor="let ability of heroToDisplay.abilities">
+    <h6>{{ability}}</h6>
+  </div>
+  <div *ngFor="let friend of heroToDisplay.friends">
+    <h6>{{friend}}</h6>
+  </div>
+
+  <!-- <button (click)="editRecipe()" class="btn">Edit</button>
+</div>
+<div *ngIf="edit">
+  <edit-recipe [selectedRecipe]="recipeToDisplay"></edit-recipe>
+</div>
+<button (click)="beginDeletingRecipe(recipeToDisplay)" class="btn">Delete</button> -->

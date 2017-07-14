@@ -14,5 +14,8 @@ getHeroes(){
   return this.heroes;
 }
 
+findHero(heroKey: string){
+  return this.database.object('heroes/'+ heroKey);
+}
 
 }
