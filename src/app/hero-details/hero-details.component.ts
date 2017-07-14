@@ -14,6 +14,7 @@ import { Router } from '@angular/router';
 })
 export class HeroDetailsComponent implements OnInit {
   heroKey: string = null;
+  edit: boolean = false;
   heroToDisplay;
 
   constructor(private route: ActivatedRoute, private router: Router, private location: Location, private heroService: HeroService) {}
@@ -30,5 +31,9 @@ export class HeroDetailsComponent implements OnInit {
       this.heroToDisplay = dataLastEmittedFromObserver;
       console.log(this.heroToDisplay);
     })
+  }
+
+  editHero(){
+     this.edit = true;
   }
 }

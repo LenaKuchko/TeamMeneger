@@ -1,0 +1,61 @@
+<div class="panel">
+  <div class="panel-heading">
+    <h3 class="panel-title">Edit Hero</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div class="form-group">
+        <label>Hero Name:</label>
+        <br>
+        <input [(ngModel)]="selectedHero.name" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label>Hero Category:</label>
+        <input [(ngModel)]="selectedHero.category" class="form-control">
+        <!-- <select [(ngModel)]="selectedHero.category">
+          <option [value]="Cosmic">Cosmic</option>
+          <option [value]="Mutant">Mutant</option>
+          <option [value]="Mystic">Mystic</option>
+          <option [value]="3">Science</option>
+          <option [value]="4">Skill</option>
+          <option [value]="5">Tech</option>
+        </select> -->
+      </div>
+
+      <div class="form-group">
+        <label>Hero Health:</label>
+        <br>
+        <input [(ngModel)]="selectedHero.health" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label>Hero Attack:</label>
+        <br>
+        <input [(ngModel)]="selectedHero.attack" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label>Hero Stars:</label>
+        <br>
+        <input [(ngModel)]="selectedHero.stars" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label>Hero World Save Times:</label>
+        <br>
+        <input [(ngModel)]="selectedHero.worldSaveTimes" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label>Hero Description:</label>
+        <br>
+        <textarea [(ngModel)]="selectedHero.description" class="form-control"></textarea>
+      </div>
+
+      <button (click)="beginUpdatingHero(selectedHero)" class="btn">Update</button>
+    </div>
+  </div>
+</div>
+
+<footer class="footer"></footer>

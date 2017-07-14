@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { masterFirebaseConfig } from './api-keys';
 import { HeroDetailsComponent } from './hero-details/hero-details.component';
+import { EditHeroComponent } from './edit-hero/edit-hero.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -22,7 +23,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     HomePageComponent,
-    HeroDetailsComponent
+    HeroDetailsComponent,
+    EditHeroComponent
   ],
   imports: [
     BrowserModule,

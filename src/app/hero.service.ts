@@ -18,4 +18,17 @@ findHero(heroKey: string){
   return this.database.object('heroes/'+ heroKey);
 }
 
+updateHero(heroToUpdate){
+  var hero = this.findHero(heroToUpdate.$key);
+     hero.update({name: heroToUpdate.name,
+                  category: heroToUpdate.category,
+                  description: heroToUpdate.description,
+                  health: heroToUpdate.health,
+                  attack: heroToUpdate.attack,
+                  stars: heroToUpdate.stars,
+                  worldSaveTimes: heroToUpdate.worldSaveTimes
+                });
+}
+
+
 }
