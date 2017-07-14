@@ -1,0 +1,47 @@
+{ "heroes": [{
+    "name": "Captain Marvel",
+    "category": "Cosmic",
+    "description": "Air Force pilot Carol Danvers' life changed course when she was caught in an explosion with an alien Kree craft. She gained superhuman powers of strength, flight, and the ability to fire bolts of energy. A member of both the Avengers and the Guardians of the Galaxy, Carol inspires many by living the motto: 'We will be the stars we were always meant to be.'",
+    "id": "1",
+    "stats": {
+      "abilities": ["Energy Absorption"],
+      "friends": ["Captain America", "Gamora", "Wolverine"],
+      "health": "3262",
+      "attack": "297",
+      "stars": "3"
+      },
+    "ulrImage": "https://vignette3.wikia.nocookie.net/marvel-contestofchampions/images/9/9a/Captain_Marvel_portrait.png/revision/latest?cb=20150830061726",
+    "worldSaveTimes": "2"
+    },
+    {
+      "name": "Gamora",
+      "category": "Cosmic",
+      "description": "'The most dangerous woman in the galaxy' is a title hard to earn, and much harder to keep. But Gamora has brawled and battled her way across the cosmos enough times to make that title stick. She's stronger than you, faster than you, and tougher than anyone. She is the adopted daughter of Thanos, but fiercely loyal to her comrades in the Guardians of the Galaxy.",
+      "id": "2",
+      "stats": {
+        "abilities": ["Cosmic Radiation", "Crit Boost"],
+        "friends": ["She-Hulk", "Star-Lord", "Capitan Marvel"],
+        "health": "3180",
+        "attack": "273",
+        "stars": "3"
+      },
+      "ulrImage": "https://vignette2.wikia.nocookie.net/marvel-contestofchampions/images/8/8e/Gamora_portrait.png/revision/latest?cb=20150830065747",
+      "worldSaveTimes": "4"
+      },
+    {
+      "name": "Groot",
+      "category": "Cosmic",
+      "description": "Groot is a Flora colossus from Planet X, the capital of the branch worlds. The Flora colossi are tree-like beings whose language is almost impossible to understand due to the stiffness of their larynges, causing their speech to sound like they are repeating the phrase 'I am Groot'. Other beings try to be friendly but become angry with the Flora colossi for not being able to speak.",
+      "id": "3",
+      "stats": {
+        "abilities": ["Armor Break", "Fury", "Regeneration"],
+        "friends": ["Star-Lord", "Rocket Raccoon"],
+        "health": "4150",
+        "attack": "285",
+        "stars": "3",
+        "ulrImage": "https://vignette2.wikia.nocookie.net/marvel-contestofchampions/images/f/f3/Groot_portrait.png/revision/latest?cb=20151224184045",
+        "worldSaveTimes": "3"
+      }
+    }
+  ]
+}
