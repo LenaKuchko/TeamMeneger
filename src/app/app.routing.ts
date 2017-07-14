@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HeroDetailsComponent } from './hero-details/hero-details.component';
 import { NewHeroComponent } from './new-hero/new-hero.component';
+import { AboutComponent } from './about/about.component';
+
 
 const appRoutes: Routes = [
   {
@@ -22,8 +24,8 @@ const appRoutes: Routes = [
     component: HomePageComponent
   },
   {
-    path: 'admin/heroes/:$key',
-    component: HomePageComponent
+    path: 'about',
+    component: AboutComponent
   }
 ];
 

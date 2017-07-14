@@ -13,6 +13,7 @@ import { HeroDetailsComponent } from './hero-details/hero-details.component';
 import { EditHeroComponent } from './edit-hero/edit-hero.component';
 import { NewHeroComponent } from './new-hero/new-hero.component';
 import { FilterPipe } from './filter.pipe';
+import { AboutComponent } from './about/about.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,7 +30,8 @@ export const firebaseConfig = {
     EditHeroComponent,
     NewHeroComponent,
     FilterPipe,
-    NewHeroComponent
+    NewHeroComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
