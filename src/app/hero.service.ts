@@ -18,6 +18,10 @@ findHero(heroKey: string){
   return this.database.object('heroes/'+ heroKey);
 }
 
+addHeroToDB(newHero: Hero){
+  this.heroes.push(newHero);
+}
+
 updateHero(heroToUpdate){
   var hero = this.findHero(heroToUpdate.$key);
      hero.update({name: heroToUpdate.name,
@@ -28,7 +32,5 @@ updateHero(heroToUpdate){
                   stars: heroToUpdate.stars,
                   worldSaveTimes: heroToUpdate.worldSaveTimes
                 });
-}
-
-
+              }
 }

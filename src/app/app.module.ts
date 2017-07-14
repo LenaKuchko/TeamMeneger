@@ -11,6 +11,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { masterFirebaseConfig } from './api-keys';
 import { HeroDetailsComponent } from './hero-details/hero-details.component';
 import { EditHeroComponent } from './edit-hero/edit-hero.component';
+import { NewHeroComponent } from './new-hero/new-hero.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -24,7 +25,8 @@ export const firebaseConfig = {
     AppComponent,
     HomePageComponent,
     HeroDetailsComponent,
-    EditHeroComponent
+    EditHeroComponent,
+    NewHeroComponent
   ],
   imports: [
     BrowserModule,
