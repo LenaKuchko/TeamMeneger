@@ -32,7 +32,8 @@ export class HeroService {
                     stars: heroToUpdate.stars,
                     worldSaveTimes: heroToUpdate.worldSaveTimes
                   });
-                }
+  }
+
   deleteHeroFromDB(heroToDelete){
     var hero = this.findHero(heroToDelete.$key);
        hero.remove();

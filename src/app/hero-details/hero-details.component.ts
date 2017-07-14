@@ -16,7 +16,8 @@ export class HeroDetailsComponent implements OnInit {
   heroKey: string = null;
   edit: boolean = false;
   heroToDisplay;
-  heroToDelete;
+  
+  currentRoute: string = this.router.url;
 
   constructor(private route: ActivatedRoute, private router: Router, private location: Location, private heroService: HeroService) {}
 
@@ -38,11 +39,5 @@ export class HeroDetailsComponent implements OnInit {
      this.edit = true;
   }
 
-  deleteHero(heroToDelete){
-    this.heroService.findHero(this.heroKey).subscribe(dataLastEmittedFromObserver => {
-      this.heroToDelete = dataLastEmittedFromObserver;
-      this.heroService.deleteHeroFromDB(this.heroToDelete);
-    });
-    this.router.navigate(['']);
-  }
+
 }

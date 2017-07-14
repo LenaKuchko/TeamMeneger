@@ -15,6 +15,8 @@ import { Location } from '@angular/common';
 export class HomePageComponent implements OnInit {
   heroes: FirebaseListObservable<any[]>;
   heroesToDisplay;
+  heroToDelete;
+  heroKey: string = null;
   filterCategory: string = "allHeroes";
   currentRoute: string = this.router.url;
   constructor(private router: Router, private route: ActivatedRoute, private location: Location, private heroService: HeroService) { }
@@ -30,6 +32,16 @@ export class HomePageComponent implements OnInit {
 
   goToHeroDetailPage(clickedHero){
     this.router.navigate(['heroes', clickedHero.$key]);
+  }
+
+  deleteHero(heroToDelete){
+    console.log(heroToDelete);
+    this.heroService.findHero(heroToDelete.$key).subscribe(dataLastEmittedFromObserver => {
+      this.heroToDelete = dataLastEmittedFromObserver;
+      console.log(this.heroToDelete);
+      this.heroService.deleteHeroFromDB(this.heroToDelete);
+    });
+    this.router.navigate(['']);
   }
 
   // onChange(optionFromMenu){

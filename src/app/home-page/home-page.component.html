@@ -11,10 +11,16 @@
 </div>
 <div class="head"></div>
 <div class="wrapper">
-  <div class="recipeItems" *ngFor="let hero of heroes | async" (click)="goToHeroDetailPage(hero)">
+  <div *ngFor="let hero of heroes | async">
     <div class="thumbnailWrapper">
       <img src="{{hero.urlImage}}" alt="">
     </div>
-    <h3 >{{hero.name}}</h3>
+    <h3 (click)="goToHeroDetailPage(hero)">{{hero.name}}</h3>
+    <div *ngIf="currentRoute === '/admin'">
+      <hr>
+      <!-- <button (click)="editHero()" class="btn">Edit</button> -->
+      <button (click)="deleteHero(hero)" class="btn">Delete</button>
+      <app-edit-hero [selectedHero]="hero"></app-edit-hero>
+    </div>
   </div>
 </div>
