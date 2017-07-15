@@ -10,17 +10,18 @@ by Lena Kuchko
     4.1. Go to https://firebase.google.com/ website.
     4.2. Sign in with your email account, then press "Get Started", create new project. 
     4.3. Click "Add firebase to Your App", your should see generated code with configuration information like on this pattern:
+    ```typescript
     export var masterFirebaseConfig = {
           apiKey: "xxxx",
           authDomain: "xxxx.firebaseapp.com",
           databaseURL: "https://xxxx.firebaseio.com",
           storageBucket: "xxxx.appspot.com",
           messagingSenderId: "xxxx"
-        };
+        };```
      4.4. In the src/app folder, create a file api-keys.ts and put this code into it.
 5. Go to the Database area by selecting the Database option from the navbar on the left-hand side. Near the top of the page, there should be a blue navbar reading Realtime Database. Below this, select the option that reads RULES.
-     5.1. Change both the ".read", and ".write" properties here to "true" like this:<br> `
-    {
+     5.1. Change both the ".read", and ".write" properties here to "true" like this:<br> 
+    `{
   "rules": {
     ".read": "true",
     ".write": "true"
