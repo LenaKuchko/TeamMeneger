@@ -33,7 +33,10 @@ by Lena Kuchko
     6.3. Locate the sample-heroes.json file from the project folder, and upload it.
 7. Run `ng serve` for a dev server. Navigate to http://localhost:4200/ in a web browser to view the project.
 
-## Description
+## Known bugs
+Filter button doesn't work.
+
+## Specifications
 |Behavior| Input |Output|
 |---|:---|:---|
 |User is able to view a list of heroes  | no input required |app display all heroes|
