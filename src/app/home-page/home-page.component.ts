@@ -5,6 +5,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 import { Router } from '@angular/router';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
+import { FilterPipe } from '../filter.pipe';
 
 @Component({
   selector: 'app-home-page',
@@ -17,16 +18,15 @@ export class HomePageComponent implements OnInit {
   heroesToDisplay;
   heroToDelete;
   heroKey: string = null;
-  filterCategory: string = "allHeroes";
+  filterByCategory: string = "allHeroes";
   currentRoute: string = this.router.url;
   constructor(private router: Router, private route: ActivatedRoute, private location: Location, private heroService: HeroService) { }
 
   ngOnInit() {
     this.heroes = this.heroService.getHeroes();
-    // console.log(this.heroes);
     this.heroService.getHeroes().subscribe(dataLastEmittedFromObserver => {
       this.heroesToDisplay = dataLastEmittedFromObserver;
-      console.log(this.heroesToDisplay);
+      console.log("OnInit", this.heroesToDisplay);
     })
   }
 
@@ -44,11 +44,12 @@ export class HomePageComponent implements OnInit {
     this.router.navigate(['']);
   }
 
-  // onChange(optionFromMenu){
-  //   // this.filterCategory = optionFromMenu;
-  //   // this.heroService.serchByCategory(input).subscribe(dataLastEmittedFromObserver => {
-  //   //   this.heroesToDisplay = dataLastEmittedFromObserver;
-  //   //   console.log(this.heroesToDisplay);
-  //   // })
-  // }
+  onChange(optionFromMenu){
+    this.filterByCategory = optionFromMenu;
+    console.log(optionFromMenu);
+    // this.heroService.serchByCategory(input).subscribe(dataLastEmittedFromObserver => {
+    //   this.heroesToDisplay = dataLastEmittedFromObserver;
+    //   console.log(this.heroesToDisplay);
+    // })
+  }
 }
