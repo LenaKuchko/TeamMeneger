@@ -2,22 +2,26 @@
   <div class="imageWrapper">
     <img src="{{heroToDisplay.urlImage}}" alt="">
   </div>
-  <h2>{{(heroToDisplay).name}}</h2>
-  <h4>{{(heroToDisplay).category}}</h4>
-  <h5>{{(heroToDisplay).description}}</h5>
-  <h5>{{(heroToDisplay).health}}</h5>
-  <h5>{{(heroToDisplay).attack}}</h5>
-  <h5>{{(heroToDisplay).stars}}</h5>
-  <h5>{{(heroToDisplay).worldSaveTimes}}</h5>
 
+  <h2>Hero Name: {{(heroToDisplay).name}}</h2>
+  <h4>Class {{(heroToDisplay).category}}</h4>
+  <hr>
+  <h4>{{(heroToDisplay).description}}</h4>
+  <h3>Stats:</h3>
+  <h5>Health: {{(heroToDisplay).health}}</h5>
+  <h5>Attack: {{(heroToDisplay).attack}}</h5>
+  <h5>Level: {{(heroToDisplay).stars}}</h5>
+  <h5>This hero save World {{(heroToDisplay).worldSaveTimes}} times;)</h5>
+  <h3>Additional abilities:</h3>
   <div *ngFor="let ability of heroToDisplay.abilities">
-    <h6>{{ability}}</h6>
+    <h5>{{ability}}</h5>
   </div>
+  <h3>Related champions, that give synergy bonuses:</h3>
   <div *ngFor="let friend of heroToDisplay.friends">
-    <h6>{{friend}}</h6>
+    <h5>{{friend}}</h5>
   </div>
   <div *ngIf="currentRoute === 'admin'">
-    
+
     <app-edit-hero [selectedHero]="heroToDisplay"></app-edit-hero>
   </div>
 

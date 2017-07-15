@@ -17,10 +17,11 @@
     </div>
     <h3 (click)="goToHeroDetailPage(hero)">{{hero.name}}</h3>
     <div *ngIf="currentRoute === '/admin'">
+      <button (click)="deleteHero(hero)" class="btn">Delete</button>
       <hr>
       <!-- <button (click)="editHero()" class="btn">Edit</button> -->
-      <button (click)="deleteHero(hero)" class="btn">Delete</button>
       <app-edit-hero [selectedHero]="hero"></app-edit-hero>
+
     </div>
   </div>
 </div>
